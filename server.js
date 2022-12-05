@@ -23,26 +23,6 @@ mongoose.connect(
     }
 );
 
-// Get all entries
-app.get("/", async (req, res) => {
-    try {
-        const data = await BinDataObj.find().sort({ _id: -1 });
-        res.json(data);
-    } catch (err) {
-        res.json({ message: err });
-    }
-})
-
-// Get all entries of a specific ID
-app.get("/:id", async (req, res) => {
-    try {
-        const data = await BinDataObj.find({ deviceId: req.params.id }).sort({ _id: -1 });
-        res.json(data);
-    } catch (err) {
-        res.json({ message: err });
-    }
-})
-
 // Get latest entry of a specific ID
 app.get("/latest/:id", async (req, res) => {
     try {
