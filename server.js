@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 // Connect to database
 mongoose.connect(
     process.env.MONGO_DB_CONNECTION_URL, 
-    { useNewUrlParser: true, useUnifiedTopology: true, dbName: "SmartWheelieBinData" },
+    { useNewUrlParser: true, useUnifiedTopology: true, dbName: process.env.DB_NAME },
     (err) => {
         if (!err) {
             console.log("Successfully connected to database");
