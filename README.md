@@ -1,0 +1,1 @@
+### Server-side code for Smart Wheelie Bin project
