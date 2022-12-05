@@ -33,7 +33,7 @@ app.get("/latest/:id", async (req, res) => {
     }
 })
 
-// Get average plastic volume for past week for a specific ID
+// Get average plastic volume per day for a specific ID
 app.get("/avg-volume/:id", async (req, res) => {
     try {
         const data = await BinDataObj.aggregate([
