@@ -19,11 +19,11 @@ const binData = new Schema({
         required: true
     },
     latitude: {
-        type: Schema.Types.Mixed,
+        type: Schema.Types.Number,
         required: true
     },
     longitude: {
-        type: Schema.Types.Mixed,
+        type: Schema.Types.Number,
         required: true
     }
 })
